@@ -13,8 +13,8 @@ public class Main {
         int theWeight = 0;
 
         // Generate all possible subsets
-        int totalSubsets = (int) Math.pow(2, size);
-        for (int subset = 0; subset < totalSubsets; subset++) {
+        long totalSubsets = (long) Math.pow(2, size);
+        for (long subset = 0; subset < totalSubsets; subset++) {
             List<Integer> currentSubset = new ArrayList<>();
             int currentWeight = 0;
             int currentValue = 0;
@@ -29,8 +29,8 @@ public class Main {
             }
 
             // Update the best subset if it has higher value and satisfies the weight constraint
-            System.out.println("currently considered combination: "+subset);
-            System.out.println("weight: "+currentWeight + " value: "+currentValue);
+//            System.out.println("currently considered combination: "+subset);
+//            System.out.println("weight: "+currentWeight + " value: "+currentValue);
             if (currentValue > bestValue && currentWeight <= W_max) {
                 bestSubset = currentSubset;
                 bestValue = currentValue;
